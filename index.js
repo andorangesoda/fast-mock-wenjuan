@@ -6,10 +6,10 @@ const app = new Koa()
 const router = new Router()
 
 // 模拟网络 1s 延迟
-async function getRes(fn) {
+async function getRes(fn, ctx) {
   return new Promise(reslove => {
     setTimeout(()=>{
-      const res = fn()
+      const res = fn(ctx)
       reslove(res)
     }, 1000)
   })
@@ -19,7 +19,7 @@ async function getRes(fn) {
 mockList.forEach(item => {
   const {url, method, response} = item
   router[method](url, async ctx =>{
-    const res = await getRes(response)
+    const res = await getRes(response, ctx)
     ctx.body = res
   })
 })

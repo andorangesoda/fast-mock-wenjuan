@@ -38,11 +38,16 @@ module.exports = [
     // 获取问卷列表
     url: '/api/question',
     method: 'get',
-    response() {
+    response(ctx) {
+      // 获取上下文的地址中的参数
+      const { url = '' } = ctx
+      const isStar = url.indexOf('isStar=true') >=0
+      const isDeleted = url.indexOf('isDeleted=true') >=0
+
       return {
         errno: 0,
         data: {
-          list: getQuestionData(),
+          list: getQuestionData({isStar, isDeleted}),
           total: 100
         }
       }
