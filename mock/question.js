@@ -39,15 +39,17 @@ module.exports = [
     url: '/api/question',
     method: 'get',
     response(ctx) {
-      // 获取上下文的地址中的参数
-      const { url = '' } = ctx
+      // 获取上下文的地址中的参数, ctx 中默认将 url 中的参数包装成了 query  对象
+      const { url = '', query = {} } = ctx
       const isStar = url.indexOf('isStar=true') >=0
       const isDeleted = url.indexOf('isDeleted=true') >=0
+      const page = parseInt(query.pageSize) || 1
+      const pageSize = parseInt(query.pageSize) || 10
 
       return {
         errno: 0,
         data: {
-          list: getQuestionData({isStar, isDeleted}),
+          list: getQuestionData({isStar, isDeleted, page, pageSize}),
           total: 100
         }
       }
