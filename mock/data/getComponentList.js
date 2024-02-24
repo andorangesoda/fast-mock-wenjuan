@@ -9,6 +9,8 @@ function getComponentList() {
       fe_id: Random.id(),
       type: 'questionInfo',
       title: '问卷信息',
+      isHidden: false,
+      isLocked: false,
       props: { title: '问卷标题', desc: '问卷描述...' }
     },
     // Title
@@ -16,6 +18,8 @@ function getComponentList() {
       fe_id: Random.id(),
       type: 'questionTitle',
       title: '标题',
+      isHidden: false,
+      isLocked: false,
       props: { text: '个人信息调研', level: 1, isCenter: false }
     },
     // Input
@@ -23,6 +27,8 @@ function getComponentList() {
       fe_id: Random.id(),
       type: 'questionInput',
       title: '输入框1',
+      isHidden: false,
+      isLocked: false,
       props: { title: '你的姓名', placeholder: '请输入姓名...' }
     },
     // Input
@@ -30,6 +36,8 @@ function getComponentList() {
       fe_id: Random.id(),
       type: 'questionInput',
       title: '输入框2',
+      isHidden: false,
+      isLocked: false,
       props: { title: '你的电话', placeholder: '请输入电话...' }
     },
   ]
