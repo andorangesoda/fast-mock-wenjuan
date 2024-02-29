@@ -6,7 +6,7 @@ function getComponentList() {
     // Info
     {
       // 注意，由于统计页，左侧和中间需要数据完全一直，所以要写死 fe_id ，不能用 Random.id()
-      fe_id: Random.id(),
+      fe_id: 'c1',
       type: 'questionInfo',
       title: '问卷信息',
       isHidden: false,
@@ -15,7 +15,7 @@ function getComponentList() {
     },
     // Title
     {
-      fe_id: Random.id(),
+      fe_id: 'c2',
       type: 'questionTitle',
       title: '标题',
       isHidden: false,
@@ -24,7 +24,7 @@ function getComponentList() {
     },
     // Input
     {
-      fe_id: Random.id(),
+      fe_id: 'c3',
       type: 'questionInput',
       title: '输入框1',
       isHidden: false,
@@ -33,7 +33,7 @@ function getComponentList() {
     },
     // Input
     {
-      fe_id: Random.id(),
+      fe_id: 'c4',
       type: 'questionInput',
       title: '输入框2',
       isHidden: false,
@@ -42,7 +42,7 @@ function getComponentList() {
     },
     // Textarea
     {
-      fe_id: Random.id(),
+      fe_id: 'c5',
       type: 'questionTextarea',
       title: '多行输入',
       isHidden: false,
@@ -51,7 +51,7 @@ function getComponentList() {
     },
     // Paragraph
     {
-      fe_id: Random.id(),
+      fe_id: 'c6',
       type: 'questionParagraph',
       title: '段落',
       isHidden: false,
@@ -60,7 +60,7 @@ function getComponentList() {
     },
     // Radio
     {
-      fe_id: Random.id(),
+      fe_id: 'c7',
       type: 'questionRadio',
       title: '单选',
       isHidden: false,
@@ -78,7 +78,7 @@ function getComponentList() {
     },
     // Checkbox
     {
-      fe_id: Random.id(),
+      fe_id: 'c8',
       type: 'questionCheckbox',
       title: '多选',
       isHidden: false,

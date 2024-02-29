@@ -21,6 +21,8 @@ module.exports = [
           desc: '问卷描述',
           js: '',
           css: '',
+          isDeleted: false,
+          isPublished: true,
           componentList: getComponentList()
         }
       }
