@@ -73,7 +73,7 @@ function getComponentList() {
             { value: 'item2', text: '选项2' },
             { value: 'item3', text: '选项3' },
           ],
-          value: '',
+          value: 'item1',
         }
     },
     // Checkbox
